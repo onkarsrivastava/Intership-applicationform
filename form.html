@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>
+        ALCENIUS-Internship Application
+    </title>
+
+</head>
+
+<body>
+    <h1>ALCENIUS LIMITED</h1>
+    <p>ALCENIUS LIMITED is a visionary platform to broadcast the wider vision of network productivity and goal specific
+        achievements in the rapidly growing technological space.To further our mission , we are looking to hire
+        energetic amd dedicated youth for various roles and train them to be tech leader of the future.Interested
+        Candidates need to fill up the form given below . Shortlisted candidates will be contacted soon through
+        e-mail.Cheers!!</p>
+    <form onsubmit="return false">
+        <div id=p3>
+            Name :
+            <input type="text" placeholder="Enter name" id="name">
+            <br><br>
+            Date of Birth :
+            <input type="date" id="dob">
+            <br><br>
+            Email :
+            <input type="email" placeholder="Enter E-mail " id="email">
+            <br><br>
+            Contact Number :
+            <input type="number" placeholder="Enter mobile number" id="num">
+            <br><br>
+            Are you a Student :
+            <input type="radio" name="obj" value="yes">yes
+            <input type="radio" name="obj" value="no">no
+            <br><br>
+            University :
+            <input type="text" id="uni">
+            <br><br>
+            College :
+            <input type="text" id="clg">
+            <br><br>
+            Semester :
+            <input type="number">
+            <br><br>
+            Degree :
+            <input type="text">
+            <br><br>
+            Specialization :
+            <select>
+                <option value="profile">Backend Development</option>
+                <option value="profile">Frontend Development</option>
+                <option value="profile" selected>Full Stack</option>
+            </select>
+            <br><br>
+            Programming Languages to work in :
+            <input type="checkbox" name="lang">Html-css
+            <input type="checkbox" name="lang">Javascript
+            <input type="checkbox" name="lang">REACTjs
+            <input type="checkbox" name="lang">python
+            <input type="checkbox" name="lang">C++
+            <input type="checkbox" name="lang">Java
+        </div>
+        <br>
+        <div>
+            <input type="submit" onclick="getdata()" value="SUBMIT">
+        </div>
+    </form>
+</body>
+<script>
+    function getdata() {
+        console.log('hello')
+        let name, email, dob, uni, clg, num;
+        name = document.getElementById("name").value
+        dob = document.getElementById("dob").value
+        email = document.getElementById("email").value
+        num = document.getElementById("num").value
+        var obj_names = document.querySelector('input[name = obj]:checked').value
+        uni = document.getElementById("uni").value
+        clg = document.getElementById("clg").value
+
+        console.log(obj_names)
+
+        localStorage.setItem("name", name);
+        localStorage.setItem("dob", dob);
+        localStorage.setItem("email", email);
+        localStorage.setItem("number", num);
+        localStorage.setItem("university", uni);
+        localStorage.setItem("college", clg);
+                // var radios = document.getElementsByName("obj"); // list of radio buttons
+        // var val = localStorage.getItem('obj'); // local storage value
+        // for(var i=0;i<radios.length;i++){
+        //   if(radios[i].value == val){
+        //       radios[i].checked = true; // marking the required radio as checked
+        //   }
+        // }
+        localStorage.setItem("choice", obj_names)
+    }
+
+</script>
+
+</html>
