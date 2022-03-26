@@ -1,0 +1,23 @@
+p{
+    color:rgb(139, 56, 0);
+    font-size: 8mm;
+
+}
+h1{
+    color:rgb(255, 20, 79);
+    text-align: center;
+    font-size: 2cm;
+}
+body{
+    background-color: gray;
+    /*background-image: url('icon.jpeg');
+    background-repeat: no-repeat;
+    background-size: 2cm 2cm;
+    background-position-x: 2cm;
+    background-position-y: 2cm;*/
+}
+#p3{
+    text-decoration: maroon;
+    font-style: oblique;
+    font-size: 1cm;
+}
